@@ -1,8 +1,0 @@
-language: generic
-sudo: required
-services:
-  - docker
-before_install:
-  - docker build -t andrwcao/frontend-app -f ./frontend-app/Dockerfile.dev .
-script:
-  - docker run -e CI=true andrwcao/frontend-app npm run test
